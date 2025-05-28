@@ -40,7 +40,7 @@ namespace EledeRepaso.Core.Implementacion
         public async Task<IEnumerable<TEntity>> GetAllAsync() => await this.Entities.Set<TEntity>(). AsNoTracking(). ToListAsync();
         
 
-        public async ValueTask<TEntity> GetByIdAsync(TId id)
+        public async Task<TEntity> GetByIdAsync(TId id)
        => await this.Entities.Set<TEntity>().FindAsync(id);
 
        

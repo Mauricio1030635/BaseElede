@@ -10,7 +10,7 @@ namespace EledeRepaso.Core.Repositories
     {
         Task AddAsync(TEntity entity);
         Task<IEnumerable<TEntity>> GetAllAsync();
-        ValueTask<TEntity> GetByIdAsync(TId id);
+        Task<TEntity> GetByIdAsync(TId id);
 
     }
 }
